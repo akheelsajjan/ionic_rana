@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  }
+  },
+  {
+    path: 'activity-detail/:activityID',
+    loadChildren: () => import('../activity-detail/activity-detail.module').then( m => m.ActivityDetailPageModule)
+  },
 ];
 
 @NgModule({
